@@ -37,10 +37,10 @@ impl Tetrimino {
 }
 
 pub const T1: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (1, 0), (2, 0)]);
-pub const T2: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (1, 0), (1, 1)]);
-pub const T3: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (-1, 1), (0, 1)]);
-pub const T4: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (0, 1), (1, 1)]);
+pub const T2: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (1, 0), (1, -1)]);
+pub const T3: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (-1, 1), (0, -1)]);
+pub const T4: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (0, 1), (1, -1)]);
 pub const T5: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 1), (0, 1), (1, 0)]);
 pub const T6: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (-1, 1), (1, 0)]);
-pub const T7: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (1, 0), (1, 1)]);
-pub const T8: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (1, 0), (0, 1)]);
+pub const T7: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (1, 0), (1, -1)]);
+pub const T8: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (1, 0), (0, -1)]);
