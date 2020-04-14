@@ -1,5 +1,10 @@
 extern crate mytetris;
 
+use mytetris::field::Field;
+
 fn main() {
-    println!("mytetris");
+    let mut field = Field::new();
+
+    field.show();
+    // println!("mytetris");
 }
