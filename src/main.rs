@@ -1,7 +1,7 @@
 extern crate mytetris;
 extern crate termion;
 
-use mytetris::{field::Field, tetrimino::T3};
+use mytetris::field::Field;
 
 fn main() {
     let mut field = Field::new();
