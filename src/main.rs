@@ -1,4 +1,5 @@
 extern crate mytetris;
+extern crate rand;
 extern crate termion;
 
 use mytetris::field::Field;

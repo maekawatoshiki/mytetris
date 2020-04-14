@@ -44,3 +44,4 @@ pub const T5: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 1), (0, 1), (1, 
 pub const T6: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (-1, 1), (1, 0)]);
 pub const T7: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (1, 0), (1, -1)]);
 pub const T8: Tetrimino = Tetrimino::new(DotColor::Black, [(-1, 0), (1, 0), (0, -1)]);
+pub const TETRIMINOS: [Tetrimino; 8] = [T1, T2, T3, T4, T5, T6, T7, T8];

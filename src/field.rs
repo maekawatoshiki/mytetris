@@ -1,4 +1,5 @@
 use crate::{dot::*, tetrimino::*};
+use rand;
 
 const FIELD_WIDTH: usize = 10;
 const FIELD_HEIGHT: usize = 20;
@@ -68,6 +69,14 @@ impl Field {
         Ok(())
     }
 
+    fn set_next_tetrimino_if_necessary(&mut self) {
+        let n: usize = rand::random();
+        self.cur_tetrimino = CurrentTetrimino {
+            tetrimino: TETRIMINOS[n % 8],
+            pos: (FIELD_WIDTH / 2, 1),
+        }
+    }
+
     pub fn update_cur_tetrimino_with_key(&mut self, key: Keys) {
         self.set_cur_tetrimino(Some(DotColor::None)).unwrap(); // Clear current tetrimino
 
@@ -103,7 +112,15 @@ impl Field {
             self.cur_tetrimino.pos.1 = save_y;
             self.set_cur_tetrimino(None).unwrap();
         }
+
+        self.erase_lines();
+        self.set_next_tetrimino_if_necessary();
     }
+
+    // fn need_next_tetrimino(&mut self) {
+    // }
+
+    fn erase_lines(&mut self) {}
 
     pub fn show(&self) {
         println!("{}\r", "*".repeat(FIELD_WIDTH + 2));
@@ -171,7 +188,7 @@ impl Field {
                 self.show();
             }
             // every 1000ms
-            if counter % 20 == 0 {
+            if counter % 10 == 0 {
                 self.down_cur_tetrimino();
             }
 
